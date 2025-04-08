@@ -1,0 +1,103 @@
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+}
+
+#gauge {
+    margin: auto;
+    width: 40vh;
+    height: 40vh;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    position: relative;
+}
+
+.needle {
+    width: 19.5vh;
+    height: 0px;
+    border: 1px solid red;
+    position: absolute;
+    top: 20vh;
+    z-index: 11;
+    transform-origin: right;
+    rotate: 0deg;
+    left: 2px;
+
+}
+
+.degr {
+    width: 40vh;
+    height: 5px;
+    border: none;
+    position: absolute;
+    background-color: #000000;
+    top: 19.5vh;
+    left: 0px;
+    z-index: 3;
+    transform-origin: center;
+    rotate: 0deg;
+}
+
+.degr.active {
+    background-color: red;
+  }
+
+.center {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    border: none;
+    position: absolute;
+    left: 19.2vh;
+    top: 19.2vh;
+    z-index: 11;
+}
+.hid {
+    width: 42vh;
+    height: 21vh;
+    background-color: white;
+    border-top: 1px solid black;
+    position: absolute;
+    top: 20.5vh;
+    left: -1vh;
+    z-index: 10;
+}
+
+.hid1 {
+    background-color: #ffffff;
+    width: 37vh;
+    height: 37vh;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5vh;
+    left: 1.5vh;
+    z-index: 5;
+}
+p {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 0px;
+    margin: 12px;
+}
+
+button {
+    background-color: #00da12;
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    margin: 30px;
+    padding: 5px 25px;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
