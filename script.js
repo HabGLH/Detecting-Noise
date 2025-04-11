@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     degdiv.style.transform = `rotate(${i}deg)`;
     degdiv.id = `d${i}`;
 
+    if (i === 0) {
+      degdiv.style.transform += " translatex(-0px)";
+      degdiv.style.width = 30 + "vh";
+      degdiv.style.zIndex = "4";
+      degdiv.style.backgroundColor = "hsl(120, 100%, 50%)";
+    }
+
     const gauge = document.getElementById("gauge");
     if (gauge) gauge.appendChild(degdiv);
   }
