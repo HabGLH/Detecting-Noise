@@ -12,7 +12,7 @@ This project visualizes real-time ambient noise levels using a gauge meter and c
 
 ## 🖼️ Preview
 
-![Noise Gauge Preview](screenshot.png) <!-- Add screenshot or remove this line -->
+![Noise Gauge Preview](Photo/Project%20view.jpeg)
 
 ## 📦 How It Works
 
@@ -20,10 +20,3 @@ This project visualizes real-time ambient noise levels using a gauge meter and c
 - Analyzes audio frequency data using `AudioContext` and `AnalyserNode`.
 - Calculates average volume and maps it to a gauge.
 - Visual feedback is provided with a rotating needle and color-coded ticks.
-
-## 🛠️ Installation & Usage
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/noise-gauge.git
-   cd noise-gauge
