@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Try now about noise label</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>There is noise in laibry!???</h1>
-    <div id="gauge">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>There is noise in laibry!???</h1>
+      <div id="gauge">
         <div class="needle" id="needle"></div>
         <div class="center"></div>
         <div class="hid"></div>
         <div class="hid1"></div>
-    </div>
-    <p>Noise Level: <span id="level">0</span> dB</p>
-    <p>Status: <span id="status">Listening...</span></p>
-    <button onclick="startNoiseDetection()">Start</button>
-    <script src="script.js"></script>
-</body>
+      </div>
+      <p>Noise Level: <span id="level">0 dB</span></p>
+      <p>Status: <span id="status">Listening...</span></p>
+      <button onclick="startNoiseDetection()">Start</button>
+      <script src="script.js"></script>
+    </main>
+  </body>
 </html>

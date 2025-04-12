@@ -8,9 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     degdiv.id = `d${i}`;
 
     if (i === 0) {
-      degdiv.style.width = 30 + "vh";
+      degdiv.style.width = 30 + "px";
       degdiv.style.zIndex = "4";
-      degdiv.style.backgroundColor = "hsl(120, 100%, 50%)";
     }
 
     const gauge = document.getElementById("gauge");
@@ -31,14 +30,21 @@ async function startNoiseDetection() {
     function changeColor(bas) {
       const maxDegree = 180;
 
-      for (let x = 10; x <= maxDegree; x += 10) {
+      for (let x = 0; x <= maxDegree; x += 10) {
         const elem = document.getElementById(`d${x}`);
+
         if (!elem) continue;
 
         if (x <= bas) {
           let percent = x / maxDegree;
           let hue = 120 - percent * 120;
           elem.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+          document.getElementById(
+            "status"
+          ).style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+          document.getElementById(
+            "level"
+          ).style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
         } else {
           elem.style.backgroundColor = "black";
         }
@@ -55,7 +61,7 @@ async function startNoiseDetection() {
       const statusElem = document.getElementById("status");
       const needleElem = document.getElementById("needle");
 
-      if (levelElem) levelElem.innerText = noiseLevel;
+      if (levelElem) levelElem.innerText = noiseLevel + " dB";
       if (statusElem)
         statusElem.innerText =
           noiseLevel < 20 ? "Quiet" : noiseLevel < 50 ? "Moderate" : "Loud";
